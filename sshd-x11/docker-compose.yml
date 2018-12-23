@@ -1,0 +1,11 @@
+version: "2.4"
+
+services:
+    sshd-x11:
+        build: 
+            context: .
+            dockerfile: ./Dockerfile
+        ports:
+            - "1234:22"
+        volumes:
+            - ${PWD}/WORK:/root/WORK
